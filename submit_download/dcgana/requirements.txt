@@ -1,7 +1,0 @@
-tensorflow==1.14
-keras
-sklearn
-psutil
-datetime
-py-cpuinfo
-matplotlib
