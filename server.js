@@ -98,9 +98,9 @@ function requestHandler(req, res) {
   } else if (/\/execute\/[^\/]+$/.test(req.url)) {
     executeUploadedFile(req, res)
   } else if (req.url == "/start") {
-    // checkPcloudNewJobs();
-    // checkPcloudResult();
-    checkSSHFSNewJobs()
+    checkPcloudNewJobs();
+    // checkPcloudResults();
+    // checkSSHFSNewJobs()
     res.writeHead(200, {
       'Content-Type': ''
     });
@@ -245,8 +245,8 @@ function checkPcloudNewJobs() {
     var file
     var jobArrLength = newJobsFolder.metadata.contents.length;
     if (jobArrLength != 0) {
-      for (var i = 0; i++; i < jobArrLength) {
-        file = newJobsFolder.metadata.contents[0]
+      for (var i = 0; i < jobArrLength; i++) {
+        file = newJobsFolder.metadata.contents[i]
         //move file to running folder
         console.log("moving file")
         toPath = "/APLAS/jobStatus/running/" + file.name;
@@ -264,18 +264,18 @@ function checkPcloudNewJobs() {
 }
 
 
-function checkPcloudResult() {
+function checkPcloudResults() {
   schedule.scheduleJob('0,30 * * * * *', () => {
-    var resultFolder
-    if (resultFolder != null) {
+    var resultsFolder
+    if (resultsFolder != null) {
       //upload result file
       console.log("uploading file")
-      var localResultFile = {
+      var localResultsFile = {
         name: "resultFile.txt",
         path: "/Users/SamZHOU/workspace/UPC-System/UPC-System-main/resultFile.txt"
       }
-      var cloudFilePath = '/APLAS/result'
-      pcloudCLient.uploadFile(localResultFile.name, localResultFile.path, cloudFilePath)
+      var cloudFilePath = '/APLAS/results'
+      pcloudCLient.uploadFile(localResultsFile.name, localResultsFile.path, cloudFilePath)
       //move file to finished folder
       console.log("moving file")
       toPath = "/APLAS/jobStatus/finished/" + file.name;
