@@ -98,8 +98,9 @@ function requestHandler(req, res) {
   } else if (/\/execute\/[^\/]+$/.test(req.url)) {
     executeUploadedFile(req, res)
   } else if (req.url == "/start") {
-    checkNewJobs();
-    checkResult();
+    // checkPcloudNewJobs();
+    // checkPcloudResult();
+    checkSSHFSNewJobs()
     res.writeHead(200, {
       'Content-Type': ''
     });
@@ -236,7 +237,7 @@ function sendInvalidRequest(res) {
   res.end();
 }
 
-function checkNewJobs() {
+function checkPcloudNewJobs() {
   console.log("start")
   schedule.scheduleJob('0,30 * * * * *', () => {
     console.log('checking folder:' + new Date());
@@ -262,7 +263,8 @@ function checkNewJobs() {
   });
 }
 
-function checkResult() {
+
+function checkPcloudResult() {
   schedule.scheduleJob('0,30 * * * * *', () => {
     var resultFolder
     if (resultFolder != null) {
@@ -281,4 +283,29 @@ function checkResult() {
       console.log("finished")
     }
   })
+}
+
+function checkSSHFSNewJobs() {
+  console.log("[checkSSHFSNewJobs] start")
+  var folderPath = "/Users/SamZHOU/workspace/UPC-System/UPC-Remote/newJobs";
+
+  schedule.scheduleJob('0,30 * * * * *', () => {
+    console.log('[checkSSHFSNewJobs] checking folder:' + new Date());
+    var files = fs.readdirSync(folderPath).map(fileName => {
+      return path.join(folderPath, fileName)
+    })
+    if (files.length != 0) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i]
+        //move file to running folder
+        console.log("moving file")
+        toPath = file.replace("newJobs", "jobStatus/running")
+        fs.renameSync(file, toPath)
+        //sending file to upc master
+        console.log("sending file")
+      }
+    } else {
+      console.log('folder is null')
+    }
+  });
 }
