@@ -25,6 +25,7 @@ e.g https://your_server_ip:1200
 e.g https://your_server_ip:1200/APLAS
 e.g https://your_server_ip:1200/EPLAS
 ```
+![UPC_WebServer](https://user-images.githubusercontent.com/79504426/117984411-ca809480-b372-11eb-88c9-95ee8b59dbde.png)
 ![UPC_Master](https://user-images.githubusercontent.com/79504426/117984199-97d69c00-b372-11eb-9f7d-a9a58e7ffb0f.png)
 ### Brief explanation of working flow
 1. User can submit jobs by clicking the submit/download button.
