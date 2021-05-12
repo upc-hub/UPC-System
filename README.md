@@ -20,8 +20,10 @@ node server.js 4200
 
 ### Open in browser, show download/upload UPC Web Server UI
 ```
-e.g http://localhost:1200
-e.g http://your_server_ip:1200
+e.g https://localhost:1200
+e.g https://your_server_ip:1200
+e.g https://your_server_ip:1200/APLAS
+e.g https://your_server_ip:1200/EPLAS
 ```
 
 ### Brief explanation of working flow
