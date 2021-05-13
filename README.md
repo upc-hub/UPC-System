@@ -51,5 +51,5 @@ e.g https://your_server_ip:1200/EPLAS
 ```
 1. We develop a platform named UPC.
 2. We study static and dynamic scheduling for the UPC system.
-3. We investigate the job migration when one user pc cannnot keep executing our UPC jobs.
+3. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
 ```
