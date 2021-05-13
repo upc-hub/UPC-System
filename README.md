@@ -1,16 +1,19 @@
 # UPC System
+```
 There are three main components in our UPC system:
 1. UPC Web Server
 2. UPC Master
 3. UPC Worker
-
+```
 ### Prerequisite
+```
 nodejs, NPM, and Python should be installed.
 For more details (necessary modules), check in the requirements.txt 
-
+```
 ### How to get the project
+```
 Just download zip folder or clone the repo using git command on your system.
-
+```
 ### Start server with default port 1200
 ```
 node server.js
@@ -45,6 +48,8 @@ e.g https://your_server_ip:1200/EPLAS
 - Workers join the master and update the available worker list in the Master and check the jobs.
 - Every five seconds, workers check new jobs are arrived or not.
 ### Brief explanation of User-PC Computing System(UPC) Study
+```
 1. We develop a platform named UPC.
 2. We study static and dynamic scheduling for the UPC system.
 3. We investigate the job migration when one user pc cannnot keep executing our UPC jobs.
+```
