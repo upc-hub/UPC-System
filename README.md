@@ -1,9 +1,12 @@
 # UPC System
-Built based on Node.JS to upload the job programs and download the results
+There are mainly three components:
+1. UPC Web Server
+2. UPC Master
+3. UPC Worker
 
 ### Pre-requisit
-**Nothing** No NPM Module dependency, as it is written using pure Node.JS API. Only nodejs should be installed.
-
+nodejs, NPM, and Python should be installed.
+For more details (necessary modules), check in the requirements.txt 
 
 ### How to get the project
 Just download zip folder or clone the repo using git command on your system.
@@ -12,12 +15,10 @@ Just download zip folder or clone the repo using git command on your system.
 ```
 node server.js
 ```
-
 ### Start server with specific port 4200
 ```
 node server.js 4200
 ```
-
 ### Open in browser, show download/upload UPC Web Server UI
 ```
 e.g https://localhost:1200
