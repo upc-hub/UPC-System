@@ -48,7 +48,6 @@ e.g https://your_server_ip:1200/EPLAS
 - Workers join the master and update the available worker list in the Master and check the jobs.
 - Every five seconds, workers check new jobs are arrived or not.
 ### Brief explanation of User-PC Computing System(UPC) Study
-```
 1. We develop a platform named UPC.
   -Web Server is built upon Ubuntu16.04. Web server programs are built using JavaScript, HTML, and CSS.
   -UPC Master is also built upon Ubuntu16.04. UPC master program is built using Python.
@@ -57,4 +56,3 @@ e.g https://your_server_ip:1200/EPLAS
   -Scheduling algorithms are designed by Java.
 5. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
   -Podman and CRIU(Checkpoin and Restore in Userspace) are adopted to implement the job migration function.
-```
