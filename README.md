@@ -4,7 +4,7 @@ There are three main components in our UPC system:
 2. UPC Master
 3. UPC Worker
 
-### Pre-requisit
+### Prerequisite
 nodejs, NPM, and Python should be installed.
 For more details (necessary modules), check in the requirements.txt 
 
