@@ -54,5 +54,7 @@ e.g https://your_server_ip:1200/EPLAS
   -UPC Master is also built upon Ubuntu16.04. UPC master program is built using Python.
   -UPC Workers can be Linux or Windows OS. UPC worker program is built using Python.
 3. We study static and dynamic scheduling for the UPC system.
-4. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
+  -Scheduling algorithms are designed by Java.
+5. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
+  -Podman and CRIU(Checkpoin and Restore in Userspace) are adopted to implement the job migration function.
 ```
