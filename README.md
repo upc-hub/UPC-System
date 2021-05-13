@@ -28,7 +28,7 @@ e.g https://your_server_ip:1200/EPLAS
 ## UPC Web Server
 ![Picture11](https://user-images.githubusercontent.com/79504426/118064692-76a79700-b3d6-11eb-996c-3e35e58490c1.png)
 ## UPC Master
-![UPC_Master](https://user-images.githubusercontent.com/79504426/117984199-97d69c00-b372-11eb-9f7d-a9a58e7ffb0f.png)
+![Picture12](https://user-images.githubusercontent.com/79504426/118064888-e6b61d00-b3d6-11eb-92e9-4cbcd7bc621a.png)
 ## UPC Worker
 ![UPC_Worker](https://user-images.githubusercontent.com/79504426/117984602-f13ecb00-b372-11eb-8820-7d1f1b850072.png)
 ### Brief explanation of working flow
