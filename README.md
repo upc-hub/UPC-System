@@ -30,7 +30,7 @@ e.g https://your_server_ip:1200/EPLAS
 ## UPC Master
 ![Picture12](https://user-images.githubusercontent.com/79504426/118064888-e6b61d00-b3d6-11eb-92e9-4cbcd7bc621a.png)
 ## UPC Worker
-![UPC_Worker](https://user-images.githubusercontent.com/79504426/117984602-f13ecb00-b372-11eb-8820-7d1f1b850072.png)
+![Picture13](https://user-images.githubusercontent.com/79504426/118064996-1cf39c80-b3d7-11eb-9d55-ba5e11fb3fd9.png)
 ### Brief explanation of working flow
 1. User can submit jobs by clicking the submit/download button.
 2. To submit the last job, click the last job button.
