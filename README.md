@@ -50,6 +50,9 @@ e.g https://your_server_ip:1200/EPLAS
 ### Brief explanation of User-PC Computing System(UPC) Study
 ```
 1. We develop a platform named UPC.
-2. We study static and dynamic scheduling for the UPC system.
-3. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
+  -Web Server is built upon Ubuntu16.04. Web server programs are built using JavaScript, HTML, and CSS.
+  -UPC Master is also built upon Ubuntu16.04. UPC master program is built using Python.
+  -UPC Workers can be Linux or Windows OS. UPC worker program is built using Python.
+3. We study static and dynamic scheduling for the UPC system.
+4. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
 ```
