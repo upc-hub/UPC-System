@@ -41,6 +41,7 @@ e.g https://your_server_ip:1200/EPLAS
 - If the workers are already in the available worker list, jobs are assigned to the correspondance worker queue.
 ## UPC Worker
 ![Picture13](https://user-images.githubusercontent.com/79504426/118064996-1cf39c80-b3d7-11eb-9d55-ba5e11fb3fd9.png)
+- user PC that joins to our UPC system, it only needs to setup the Docker client.
 - Workers join the master and update the available worker list in the Master and check the jobs.
 - Every five seconds, workers check new jobs are arrived or not.
 ### Brief explanation of User-PC Computing System(UPC) Study
