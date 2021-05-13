@@ -1,5 +1,5 @@
 # UPC System
-There are mainly three components:
+There are three main components in our UPC system:
 1. UPC Web Server
 2. UPC Master
 3. UPC Worker
