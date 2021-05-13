@@ -31,11 +31,18 @@ e.g https://your_server_ip:1200/EPLAS
 - UPC web server is located under the local area network.
 - User in the same network can access UPC Web interface directly through the web browser for submitting the jobs.
 - For the EPLAS that doesn't have the public ip address for it's own server. In this case, they can submit the jobs by adding to the pCLoud.
-- For the APLAS that has own public ip address for the server, it allows SSH connection for the UPC. UPC grabs the job using SSHFS protocol 
+- For the APLAS that has own public ip address for the server, it allows SSH connection for the UPC. UPC grabs the job from APLAS server using SSHFS protocol.
+- According to the above figure, all necessary directories are needed to create at Web Server storage due to synchronize with the UPC Master.
 ## UPC Master
 ![Picture12](https://user-images.githubusercontent.com/79504426/118064888-e6b61d00-b3d6-11eb-92e9-4cbcd7bc621a.png)
+- Every 3o seconds, UPC Master checks the jobs from the Web Server. If there is job, it is moved to the temporary queue. Jobs in the temporary queue are renamed and put in the common queue.
+- Jobs in the common queue are extracted and read the Metadata of each job to differentiate docker image is needed to build or not. 
+- After doing the necessary things on the jobs, they are waiting in the container queue until the workers are not joined 
+- If the workers are already in the available worker list, jobs are assigned to the correspondance worker queue.
 ## UPC Worker
 ![Picture13](https://user-images.githubusercontent.com/79504426/118064996-1cf39c80-b3d7-11eb-9d55-ba5e11fb3fd9.png)
+- Workers join the master and update the available worker list in the Master and check the jobs.
+- Every five seconds, workers check new jobs are arrived or not.
 ### Brief explanation of working flow
 1. User can submit jobs by clicking the submit/download button.
 2. To submit the last job, click the last job button.
