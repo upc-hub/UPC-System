@@ -49,10 +49,10 @@ e.g https://your_server_ip:1200/EPLAS
 - Every five seconds, workers check new jobs are arrived or not.
 ### Brief explanation of User-PC Computing System(UPC) Study
 1. We develop a platform named UPC.
-  -Web Server is built upon Ubuntu16.04. Web server programs are built using JavaScript, HTML, and CSS.
-  -UPC Master is also built upon Ubuntu16.04. UPC master program is built using Python.
-  -UPC Workers can be Linux or Windows OS. UPC worker program is built using Python.
-3. We study static and dynamic scheduling for the UPC system.
-  -Scheduling algorithms are designed by Java.
-5. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
-  -Podman and CRIU(Checkpoin and Restore in Userspace) are adopted to implement the job migration function.
+2. Web Server is built upon Ubuntu16.04. Web server programs are built using JavaScript, HTML, and CSS.
+3. UPC Master is also built upon Ubuntu16.04. UPC master program is built using Python.
+4. UPC Workers can be Linux or Windows OS. UPC worker program is built using Python.
+5. We study static and dynamic scheduling for the UPC system.
+6. Scheduling algorithms are designed by Java.
+7. We investigate the job migration when one user PC cannnot keep executing our UPC jobs.
+8. Podman and CRIU(Checkpoin and Restore in Userspace) are adopted to implement the job migration function.
