@@ -43,12 +43,7 @@ e.g https://your_server_ip:1200/EPLAS
 ![Picture13](https://user-images.githubusercontent.com/79504426/118064996-1cf39c80-b3d7-11eb-9d55-ba5e11fb3fd9.png)
 - Workers join the master and update the available worker list in the Master and check the jobs.
 - Every five seconds, workers check new jobs are arrived or not.
-### Brief explanation of working flow
-1. User can submit jobs by clicking the submit/download button.
-2. To submit the last job, click the last job button.
-3. All user submitted jobs are saved in under submit_download directory.
-4. When the last job button clicked, the jobs under submit_download are synchronized to the UPC master server using ssh file transfer protocol.
-5. UPC master performs the job management and execution process collaborating with UPC workers.
-6. When UPC master obtains the results from the worker PCs, it synchronizes these reults with the UPC Web server and store under submit_download directory.
-7. When results appear on the web interface, user can download by clicking the results.
-(Currently, you can only check submit/download button to upload jobs and by clicking this job you can also download again because there are other things necessary to carry out to connect with UPC master. Soon, I can provide you. Thank you very much.) 
+### Brief explanation of User-PC Computing System(UPC) Study
+1. We develop a platform named UPC.
+2. We study static and dynamic scheduling for the UPC system.
+3. We investigate the job migration when one user pc cannnot keep executing our UPC jobs.
